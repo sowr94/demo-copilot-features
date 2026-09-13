@@ -2,20 +2,20 @@
 # Replace the empty values with your AWS settings.
 
 # 1. Required: globally unique, 3-63 lowercase characters
-Bucket_name = "" [example="my-company-data-2026", default=""]
+Bucket_name = "s3-demo-bucket-qqaa" [example="my-company-data-2026", default=""]
 
 # 2. Example: us-east-1
-AWS_region = "" [example="us-east-1", default="us-east-1"]
+AWS_region = "us-east-1" [example="us-east-1", default="us-east-1"]
 
 # Security settings
 # 3.
-Block_public_access = "" [true, false, default="true"]
+Block_public_access = "true" [true, false, default="true"]
 
 # 4.
-Object_ownership = "" [BucketOwnerEnforced, BucketOwnerPreferred, ObjectWriter, default="BucketOwnerEnforced"]
+Object_ownership = "BucketOwnerEnforced" [BucketOwnerEnforced, BucketOwnerPreferred, ObjectWriter, default="BucketOwnerEnforced"]
 
 # 5.
-Server_side_encryption = "" [SSE-S3, SSE-KMS, default="SSE-S3"]
+Server_side_encryption = "SSE-S3" [SSE-S3, SSE-KMS, default="SSE-S3"]
 
 # Required only when Server_side_encryption = "SSE-KMS"
 # 6.
@@ -23,10 +23,10 @@ KMS_key_id = "" [example="arn:aws:kms:us-east-1:123456789012:key/key-id", defaul
 
 # Optional settings
 # 7.
-Enable_versioning = "" [true, false, default="true"]
+Enable_versioning = "true" [true, false, default="true"]
 
 # 8.
-Enable_access_logging = "" [true, false, default="false"]
+Enable_access_logging = "false" [true, false, default="false"]
 
 # 9.
 Logging_target_bucket = "" [example="my-access-log-bucket", default=""]
@@ -35,18 +35,18 @@ Logging_target_bucket = "" [example="my-access-log-bucket", default=""]
 Logging_prefix = "" [example="s3-access-logs/", default=""]
 
 # 11.
-Enable_object_lock = "" [true, false, default="false"]
+Enable_object_lock = "false" [true, false, default="false"]
 
 # GOVERNANCE or COMPLIANCE; used only when Object Lock is enabled
 # 12.
 Object_lock_mode = "" [GOVERNANCE, COMPLIANCE, default=""]
 
 # 13.
-Object_lock_retention_days = "" [example="30", default=""]
+Object_lock_retention_days = "30" [example="30", default=""]
 
 # 14.
-Lifecycle_rules = "" [example=" transition_after_days=30; expire_after_days=365", default=""]
+Lifecycle_rules = "transition_after_days=30" [example=" transition_after_days=30; expire_after_days=365", default=""]
 
 # Enter multiple tags as key=value pairs separated by semicolons (maximum 50 tags)
 # 15.
-Tags = "" [example="Environment=dev;Owner=team-name;Project=project-name", default=""]
+Tags = "Environment=dev;Owner=Sowmya" [example="Environment=dev;Owner=team-name;Project=project-name", default=""]
